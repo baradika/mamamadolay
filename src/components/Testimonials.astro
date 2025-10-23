@@ -1,0 +1,23 @@
+---
+const items = [
+	{ name: 'Rina • Jakarta', text: 'Rumah jadi bersih banget, wangi, dan rapi. Timnya ramah dan teliti!' },
+	{ name: 'Andi • Bekasi', text: 'Pengerjaan cepat dan profesional. Pasti repeat order untuk kantor.' },
+	{ name: 'Mega • Depok', text: 'Deep cleaning kamar mandi mantap, noda membandel hilang semua.' },
+];
+---
+
+<section id="testimoni" class="section">
+	<div class="container">
+		<span class="badge">Testimoni</span>
+		<h2 style="margin:12px 0 18px;font-size:30px">Apa Kata Pelanggan</h2>
+		<div class="grid grid-3">
+			{items.map((t) => (
+				<blockquote class="card" style="padding:18px;border-radius:16px;background:#ffffff;border:1px solid var(--line);">
+					<p style="color:var(--muted);line-height:1.7">“{t.text}”</p>
+					<footer style="margin-top:10px;color:#0f172a;font-weight:600">{t.name}</footer>
+				</blockquote>
+			))}
+		</div>
+	</div>
+</section>
+

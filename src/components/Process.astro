@@ -1,0 +1,31 @@
+---
+const steps = [
+	{ no: '01', title: 'Konsultasi', desc: 'Ceritakan kebutuhan Anda, kami bantu pilih layanan yang tepat.' },
+	{ no: '02', title: 'Jadwal', desc: 'Tentukan waktu kunjungan yang fleksibel sesuai jadwal Anda.' },
+	{ no: '03', title: 'Eksekusi', desc: 'Tim datang tepat waktu, bekerja rapi sesuai SOP.' },
+	{ no: '04', title: 'QC & Garansi', desc: 'Pemeriksaan hasil dan garansi revisi bila diperlukan.' },
+];
+---
+
+<section id="proses" class="section">
+	<div class="container">
+		<span class="badge">Cara Kerja</span>
+		<h2 style="margin:12px 0 18px;font-size:30px">Proses Mudah, Hasil Maksimal</h2>
+		<div class="grid grid-4" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;">
+			{steps.map((s) => (
+				<div class="card" style="padding:18px;border-radius:16px;">
+					<span style="color:#0369a1;font-weight:700">{s.no}</span>
+					<strong style="display:block;margin:6px 0 4px">{s.title}</strong>
+					<p style="color:var(--muted);line-height:1.6">{s.desc}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	@media (max-width: 960px) {
+		#proses .container .grid-4 { grid-template-columns: 1fr !important; }
+	}
+</style>
+

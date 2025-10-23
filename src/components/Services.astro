@@ -1,0 +1,31 @@
+---
+const steps = [
+	{ no: '01', title: 'Unduh Aplikasi', desc: 'Buka App Store/Play Store, cari “NeatWork Clean”, lalu instal.' },
+	{ no: '02', title: 'Daftar & Isi Alamat', desc: 'Buat akun, isi alamat lengkap dan preferensi kebersihan Anda.' },
+	{ no: '03', title: 'Pesan Layanan', desc: 'Pilih tanggal/jam, konfirmasi, dan tim kami siap datang.' },
+];
+---
+
+<section id="pesan" class="section">
+	<div class="container">
+		<div style="display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:28px;">
+			<div>
+				<span class="badge">Pesan dalam 5 Menit</span>
+				<h2 style="margin:12px 0 6px;font-size:30px">Instal, Daftar, Pesan — Selesai</h2>
+				<p style="color:var(--muted)">Ikuti 3 langkah mudah berikut untuk mulai memesan layanan.</p>
+			</div>
+			<a class="button-primary" href="#booking">Butuh Bantuan?</a>
+		</div>
+
+		<div class="grid grid-3">
+			{steps.map((s) => (
+				<div class="card" style="padding:18px;border-radius:16px;">
+					<span style="color:#0369a1;font-weight:700">{s.no}</span>
+					<strong style="display:block;margin:6px 0 4px">{s.title}</strong>
+					<p style="color:var(--muted);line-height:1.6">{s.desc}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
